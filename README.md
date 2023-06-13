@@ -6,3 +6,8 @@ With this application, users can purchase a new smart card, top up the card with
 Please make sure to install Flask (pip install flask) before running the application.
 # Sample tested Output Images 
 Shown in screenshots
+
+# Command
+
+python app.py (Windows OS)
+python3 app.py (Linux OS)
