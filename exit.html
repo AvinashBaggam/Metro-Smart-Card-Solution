@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metro Smart Card - Exit Station</title>
+</head>
+<body>
+    <h1>Exit Station</h1>
+    <p>Card Number: {{ smart_card.card_number }}</p>
+    <p>Balance: Rs.{{ smart_card.balance }}</p>
+    <form method="post" action="/exit/{{ smart_card.id }}">
+        <input type="submit" value="Exit Station">
+    </form>
+</body>
+</html>

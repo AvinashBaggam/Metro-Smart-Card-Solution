@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metro Smart Card Solution</title>
+</head>
+<body>
+    <h1>Metro Smart Card Solution</h1>
+    {% if message %}
+    <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if card_id and balance %}
+    <h3>Card Information</h3>
+    <p>Card ID: {{ card_id }}</p>
+    <p>Balance: {{ balance }}</p>
+    {% endif %}
+    <form method="POST" action="/">
+        <h3>Purchase New Card</h3>
+        <label for="card_id">Card ID:</label>
+        <input type="text" name="card_id" required><br>
+        <label for="initial_balance">Initial Balance:</label>
+        <input type="number" step="0.01" name="initial_balance" required><br>
+        <input type="submit" name="purchase" value="Purchase Card"><br>
+
+        {% if card_id and balance %}
+        <h3>Top-up Card</h3>
+        <label for="topup_amount">Top-up Amount:</label>
+        <input type="number" step="0.01" name="topup_amount" required><br>
+        <input type="submit" name="topup" value="Top-up Card"><br>
+
+        <h3>Enter Station</h3>
+        <label for="enter_station">Station:</label>
+        <input type="number" name="enter_station" required><br>
+        <input type="submit" name="enter" value="Enter Station"><br>
+
+        <h3>Exit Station</h3>
+        <label for="exit_station">Station:</label>
+        <input type="number" name="exit_station" required><br>
+        <input type="submit" name="exit" value="Exit Station"><br>
+        {% endif %}
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fare Deduction</title>
+</head>
+<body>
+    <h1>Fare Deduction</h1>
+    <form method="POST" action="/fare-deduction/{{ card_id }}">
+        <label for="stations">Number of Stations Visited:</label>
+        <input type="number" id="stations" name="stations" min="1" required>
+        <br>
+        <input type="submit" value="Deduct Fare">
+    </form>
+</body>
+</html>
